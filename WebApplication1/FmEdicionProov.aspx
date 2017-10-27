@@ -13,18 +13,101 @@
              <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
   </div>       
  </div>
-<div class="row">
-  <div class="col-sm-6">
-     <div class="form-group">
-        <label class="control-label" for="fname">Proveedor Nombre Resumido</label>
-         <asp:TextBox ID="TextResum" runat="server" CssClass="form-control"></asp:TextBox>
-     <div >
-         <uc1:WebUserControlCuit ID="WebUserControlCuit1" 
-             runat="server" />
-     <br />
-           </div>
+<div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="" CssClass="col-md-2 control-label">Nombre Resumido</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" 
+                                ID="TextResum"  
+                                CssClass="form-control" 
+                                TextMode="SingleLine" 
+                                Width="323px" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TextResum"
+                                CssClass="text-danger" ErrorMessage="El campo Obligatorio." />
+                        </div>
+ </div>
+
+<div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="" CssClass="col-md-2 control-label">Razón Social</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" 
+                                ID="TextRsocial"  
+                                CssClass="form-control" 
+                                TextMode="SingleLine" 
+                                Width="323px" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TextRsocial"
+                                CssClass="text-danger" ErrorMessage="El campo Obligatorio." />
+                        </div>
+ </div>
+    
+<div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="" CssClass="col-md-2 control-label">Localidad</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" 
+                                ID="TextLocalidad"  
+                                CssClass="form-control" 
+                                TextMode="SingleLine" 
+                                Width="323px" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TextRsocial"
+                                CssClass="text-danger" ErrorMessage="El campo Obligatorio." />
+                        </div>
+ </div>
+  
+<div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="" CssClass="col-md-2 control-label">Código Postal</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" 
+                                ID="TextCodPostal"  
+                                CssClass="form-control" 
+                                TextMode="SingleLine" 
+                                Width="323px" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TextRsocial"
+                                CssClass="text-danger" ErrorMessage="El campo Obligatorio." />
+                        </div>
+ </div>
+     
+<div class="form-group">
+<asp:Label runat="server" AssociatedControlID="" CssClass="col-md-2 control-label">Provincia</asp:Label>
+<div class="col-md-10">
+    <asp:DropDownList runat="server" ID="ProvinciasL" CssClass ="col-md-2">
+    <asp:ListItem Text="" Value="theValue" />
+</asp:DropDownList>
+</div>
+</div>
+
+<div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="" CssClass="col-md-2 control-label">C.u.i.t.</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" 
+                                ID="TextCuit"  
+                                CssClass="form-control" 
+                                TextMode="SingleLine" 
+                                Width="323px" />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TextCuit"
+                                CssClass="text-danger" ErrorMessage="El campo Obligatorio." />
+                        </div>
+ </div>
+
+<div class="form-group">
+                        <asp:Label runat="server" AssociatedControlID="" CssClass="col-md-2 control-label">Tipo De Iva</asp:Label>
+                        <div class="col-md-10">
+                            <asp:TextBox runat="server" 
+                                ID="TextTipoiva"  
+                                CssClass="form-control" 
+                                TextMode="SingleLine" 
+                                Width="123px" 
+                                value = 0
+                                />
+                            <asp:RequiredFieldValidator runat="server" ControlToValidate="TextTipoiva"
+                                CssClass="text-danger" ErrorMessage="El campo Obligatorio." />
+                        </div>
        </div>
-   </div>
+     
+
+
+
+
+
+
 
     <asp:Button runat="server" OnClick="prueba" Text="Iniciar sesión" CssClass="btn btn-success" />
 
@@ -38,5 +121,5 @@
 
 
 
-    </div>
+   
 </asp:Content>

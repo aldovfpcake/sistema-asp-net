@@ -201,6 +201,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Account\WebPadronProveed.aspx" />
+    <Content Include="altaproveedor.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
@@ -209,6 +210,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="fmconceptos.aspx" />
     <Content Include="FmEdicionProov.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -219,9 +221,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="images\WebForm1.aspx" />
-    <Content Include="WebPadronProveedores.aspx" />
     <Content Include="ClassDiagram1.cd" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebFrproveedores.aspx" />
     <Content Include="WebUserControlCuit.ascx" />
+    <Content Include="ClassDiagram2.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
@@ -385,6 +390,13 @@
     <Compile Include="Account\WebPadronProveed.aspx.designer.cs">
       <DependentUpon>WebPadronProveed.aspx</DependentUpon>
     </Compile>
+    <Compile Include="altaproveedor.aspx.cs">
+      <DependentUpon>altaproveedor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="altaproveedor.aspx.designer.cs">
+      <DependentUpon>altaproveedor.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -411,6 +423,13 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="fmconceptos.aspx.cs">
+      <DependentUpon>fmconceptos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fmconceptos.aspx.designer.cs">
+      <DependentUpon>fmconceptos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FmEdicionProov.aspx.cs">
       <DependentUpon>FmEdicionProov.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -431,6 +450,7 @@
     <Compile Include="Model1.cs" />
     <Compile Include="Model2.cs" />
     <Compile Include="Model3.cs" />
+    <Compile Include="Model4.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Proveedor.cs" />
@@ -449,6 +469,7 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="TIPOIVA.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -456,12 +477,26 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebPadronProveedores.aspx.cs">
-      <DependentUpon>WebPadronProveedores.aspx</DependentUpon>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebPadronProveedores.aspx.designer.cs">
-      <DependentUpon>WebPadronProveedores.aspx</DependentUpon>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFrproveedores.aspx.cs">
+      <DependentUpon>WebFrproveedores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFrproveedores.aspx.designer.cs">
+      <DependentUpon>WebFrproveedores.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebUserControlCuit.ascx.cs">
       <DependentUpon>WebUserControlCuit.ascx</DependentUpon>
@@ -471,7 +506,9 @@
       <DependentUpon>WebUserControlCuit.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
